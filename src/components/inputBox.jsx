@@ -1,7 +1,8 @@
 import React from "react";
+import "./inputBox.css";
 
 export const InputField = ({label,type='text',placeholder,error,value,onChange})=>{
-const[isTyping,setIsTyping] = useState(false);
+
 
 const handleChange = (e)=>{
     onChange(e);
