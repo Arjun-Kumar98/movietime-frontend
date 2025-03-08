@@ -1,0 +1,32 @@
+.input-field {
+    /* Group 1 */
+    position: absolute;
+    width: 300px;
+    height: 45px;
+    left: 88px;
+    top: 135px;
+  
+    /* Rectangle */
+    background: #224957;
+    border-radius: 10px;
+  
+    /* Email */
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+  
+  .input-field.error {
+    background-color: #FFCCCC; /* Light red background for error */
+    border: 2px solid #FF0000; /* Red border */
+  }
+  
+  .input-field.active {
+    background-color: #e0f7fa; /* Light blue background for active state */
+    border: 2px solid #00bcd4; /* Blue border */
+  }
+  
