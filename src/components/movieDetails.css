@@ -1,0 +1,104 @@
+.submit-label{   
+left: 32.96%;
+right: 32.96%;
+top: 28.57%;
+bottom: 28.57%;
+
+/* Body/Regular */
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height, or 150% */
+text-align: center;
+color: #FFFFFF;
+}
+.submit-button{
+    width: 179px;
+    height: 56px;
+    left: 903px;
+    top: 474px;
+    /* primary */
+    background: #2BD17E;
+    border-radius: 10px;
+     
+}
+
+.cancel-label{
+    left: 32.93%;
+    right: 32.93%;
+    top: 28.57%;
+    bottom: 28.57%;
+    
+    /* Body/Regular */
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+    text-align: center;
+    
+    color: #FFFFFF;  
+}
+
+.cancel-button{
+box-sizing: border-box;
+width: 167px;
+height: 56px;
+left: 720px;
+top: 474px;
+
+border: 1px solid #FFFFFF;
+border-radius: 10px;
+}
+
+.input-section{
+    width: 362px;
+    height: 45px;
+    left: 720px;
+    top: 296px;
+}
+
+.input-label-one{
+    background: #224957;
+border-radius: 10px;
+
+
+width: 30px;
+height: 24px;
+left: 736px;
+top: 306px;
+
+/* Body/small */
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 24px;
+/* identical to box height, or 171% */
+text-align: center;
+}
+
+.input-label-two{
+    background: #224957;
+border-radius: 10px;
+
+
+/* Title */
+
+width: 200px;
+height: 24px;
+left: 736px;
+top: 306px;
+
+/* Body/small */
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 24px;
+/* identical to box height, or 171% */
+text-align: center;
+}

@@ -1,0 +1,30 @@
+.signup-container {
+    background-color: #093545;
+    min-height: 100vh;
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .signup-title {
+    font-size: 48px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  
+  .signup-form {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Optional: Add hover effect to the button */
+  .btn.primary:hover {
+    background-color: #28c671;
+  }
+  

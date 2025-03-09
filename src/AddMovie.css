@@ -1,0 +1,18 @@
+/* === Page wrapper (to push content to left) === */
+.add-movie-wrapper {
+  background-color: #093545;
+  min-height: 100vh;
+  padding: 60px 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* align everything to the left */
+}
+
+/* === Heading Styling === */
+.add-movie-heading {
+  font-size: 48px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 40px;
+  font-family: 'Montserrat', sans-serif;
+}

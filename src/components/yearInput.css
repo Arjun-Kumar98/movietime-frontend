@@ -1,0 +1,50 @@
+.year-select__control {
+    background-color: #224957;
+    border: none;
+    border-radius: 10px;
+    min-height: 45px;
+    padding: 2px;
+    box-shadow: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  .year-select__control--is-focused {
+    border: 1px solid #2BD17E;
+    background-color: white;
+  }
+  
+  .year-select__single-value {
+    color: white;
+    font-weight: 500;
+  }
+  
+  .year-select__menu {
+    background-color: white;
+    z-index: 10;
+  }
+  
+  .year-select__option {
+    color: black;
+    cursor: pointer;
+  }
+  
+  .year-select__option--is-focused {
+    background-color: #2BD17E;
+    color: white;
+  }
+  
+  .year-select__placeholder {
+    color: #ffffffb3;
+    text-align: center;
+  }
+  
+  .error-message {
+    font-size: 12px;
+    color: red;
+    margin-top: 4px;
+    text-align: left;
+    padding-left: 8px;
+  }
+  

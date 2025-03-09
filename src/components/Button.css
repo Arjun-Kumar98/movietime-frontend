@@ -1,0 +1,33 @@
+.btn {
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Primary - Green */
+  .btn.primary {
+    background-color: #2bd17e;
+    color: white;
+  }
+  
+  /* Secondary - Dark/Bordered */
+  .btn.secondary {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+  }
+  
+  .btn.primary:hover {
+    background-color: #28b96f;
+  }
+  
+  .btn.secondary:hover {
+    background-color: #093545;
+    border-color: #2bd17e;
+    color: #2bd17e;
+  }
+  

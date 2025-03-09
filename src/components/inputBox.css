@@ -1,32 +1,48 @@
-.input-field {
-    /* Group 1 */
-    position: absolute;
-    width: 300px;
-    height: 45px;
-    left: 88px;
-    top: 135px;
-  
-    /* Rectangle */
-    background: #224957;
-    border-radius: 10px;
-  
-    /* Email */
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
-    text-align: center;
-    color: #FFFFFF;
-  }
-  
-  .input-field.error {
-    background-color: #FFCCCC; /* Light red background for error */
-    border: 2px solid #FF0000; /* Red border */
-  }
-  
-  .input-field.active {
-    background-color: #e0f7fa; /* Light blue background for active state */
-    border: 2px solid #00bcd4; /* Blue border */
+.inputBox{
+position: relative;
+width: 300px;
+height: 45px;
+left: 5.33%;
+right: 81.33%;
+top: 24.44%;
+bottom: 22.22%;
+background: #224957;
+border-radius: 10px;
+
+/* Body/small */
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 24px;
+/* identical to box height, or 171% */
+text-align: center;
+
+/*color: #FFFFFF;*/
+}
+
+.inputBox.typing{
+    background: #FFFFFF;
+    border:  #224957;
+border-radius: 10px;
+background:#224957
+}
+
+.inputBox:error{
+    background: #FFFFFF;
+    border: 1px red;
+border-radius: 10px;
+color:red
+}
+
+.input-container {
+    align-self: center;
+    margin-bottom: 15px; 
+        width: 300px;  
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
