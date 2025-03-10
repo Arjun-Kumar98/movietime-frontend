@@ -75,13 +75,13 @@ function EditMovie() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const newErrors = {
+    const validationErrors = {
       title: title ? "" : "Title is required",
       year: year ? "" : "Publishing year is required",
     };
-    setErrors(newErrors);
+    setErrors(validationErrors);
 
-    if (!newErrors.title && !newErrors.year) {
+    if (!validationErrors.title && !validationErrors.year) {
       try {
         const formData = new FormData();
         formData.append("movieId", movieId);

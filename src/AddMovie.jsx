@@ -76,7 +76,7 @@ function AddMovie() {
           setImagePreviewUrl(null);
           navigate('/movieList')
         } else {
-          alert(result.error || "Something went wrong.");
+          alert(result.error || "Failed to upload movie.");
         }
       } catch (err) {
         console.error("Movie upload error:", err);
