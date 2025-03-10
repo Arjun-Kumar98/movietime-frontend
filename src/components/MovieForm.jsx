@@ -7,19 +7,30 @@ function MovieForm({
   title,
   year,
   image,
+  imagePreviewUrl,
   errors,
   onTitleChange,
   onYearChange,
   onImageChange,
   onSubmit,
   onCancel,
+  onRemoveImage,
   mode = "add"
 }) {
   return (
     <form className="movie-form" onSubmit={onSubmit}>
       <div className="upload-panel">
         <label htmlFor="image-upload" className="image-drop-box">
-          {image ? <p>{image.name}</p> : (
+          {imagePreviewUrl ? (
+            <>
+              <img
+                src={imagePreviewUrl}
+                alt="Preview"
+                className="image-preview"
+              />
+              <p>{image?.name}</p>
+            </>
+          ) : (
             <>
               <span className="upload-icon">&#8682;</span>
               <p>{mode === "edit" ? "Drop other image here" : "Drop an image here"}</p>
@@ -33,6 +44,12 @@ function MovieForm({
             hidden
           />
         </label>
+
+        {image && (
+          <div className="image-remove-icon" onClick={onRemoveImage} title="Remove image">
+            X
+          </div>
+        )}
       </div>
 
       <div className="form-panel">

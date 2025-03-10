@@ -1,43 +1,68 @@
 import React, { useState } from 'react';
 import InputField from './components/InputField';
 import Button from './components/Button';
-import './loginPage.css';
+import {useNavigate} from 'react-router-dom';
+import '.LoginPage.css';
 
 function LoginPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [errors, setErrors] = useState({ email: '', password: '' });
+  const navigate = useNavigate();
 
-  const handleEmailChange = (e) =>{
+  const handleEmailChange = (e) => {
     setEmail(e.target.value);
-    setErrors((prev)=>({...prev,email:""}));
+    setErrors((prev) => ({ ...prev, email: '' }));
   };
 
-  const handlePasswordChange = (e) =>{
+  const handlePasswordChange = (e) => {
     setPassword(e.target.value);
-    setErrors((prev)=>({...prev,password:""}));
-  }
+    setErrors((prev) => ({ ...prev, password: '' }));
+  };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    let validationErrors = {};
-  
+    const validationErrors = {};
+
     if (!email) {
-      validationErrors.email = "Email is required";
+      validationErrors.email = 'Email is required';
     } else if (!emailRegex.test(email)) {
-      validationErrors.email = "Invalid email format";
+      validationErrors.email = 'Invalid email format';
     }
-  
+
     if (!password) {
-      validationErrors.password = "Password is required";
+      validationErrors.password = 'Password is required';
     }
-  
+
     setErrors(validationErrors);
 
-    if (!validationErrors.email && !validationErrors.password) {
-      console.log('Login successful with:', { email, password });
-      // Add your login/auth logic here
+    if (Object.keys(validationErrors).length === 0) {
+      try {
+        const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/api/auth/login`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email, password }),
+        });
+
+        const result = await response.json();
+      
+
+        if (response.ok) {
+          alert('Login successful!');
+          console.log('Token:', result.token);
+          // Optional: store token
+           localStorage.setItem('token', result.token);
+           localStorage.setItem('userId',result.userData);
+           navigate('/movieList');
+        } else {
+          alert(result.error || 'Login failed');
+        }
+      } catch (error) {
+        console.error('Login error:', error);
+        alert('Something went wrong during login.',error);
+      }
     }
   };
 
@@ -46,6 +71,7 @@ function LoginPage() {
       <h1 className="title">Sign In</h1>
 
       <form className="signin-form" onSubmit={handleSubmit}>
+        
         <InputField
           type="email"
           placeholder="Email"
