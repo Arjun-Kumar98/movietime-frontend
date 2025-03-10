@@ -1,7 +1,7 @@
 import React from "react";
 import InputField from "./InputField";
 import Button from "./Button";
-import "./movieForm.css";
+import "./MovieForm.css";
 
 function MovieForm({
   title,

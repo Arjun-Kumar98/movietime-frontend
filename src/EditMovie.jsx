@@ -4,7 +4,7 @@ import MovieForm from "./components/MovieForm";
 import "./EditMovie.css";
 
 function EditMovie() {
-  const { movieId } = useParams();
+  const { movieId } = useParams(); 
   const navigate = useNavigate();
 
   const [title, setTitle] = useState("");
@@ -16,12 +16,12 @@ function EditMovie() {
   const userId = localStorage.getItem("userId");
   const token = localStorage.getItem("token");
 
-  // 👉 Fetch movie details by movieId from backend
+
   useEffect(() => {
     const fetchMovieDetails = async () => {
       try {
         const response = await fetch(
-          `${process.env.REACT_APP_API_BASE_URL}/api/movies/edit?movieId=${movieId}&userId=${userId}`,
+          `${process.env.REACT_APP_API_BASE_URL}/api/movies/select?movieId=${movieId}&userId=${userId}`,
           {
             method: "GET",
             headers: {
@@ -36,11 +36,11 @@ function EditMovie() {
           setYear(result.movie.year);
           setImagePreviewUrl(result.movie.poster_url);
         } else {
-          alert(result.error || "Failed to fetch movie data.");
+          alert(result.error || "Failed to fetch movie.");
         }
       } catch (err) {
-        console.error("Fetch movie error:", err);
-        alert("Something went wrong while fetching movie.");
+        console.error("Fetch error:", err);
+        alert("Error fetching movie details.");
       }
     };
 
@@ -60,7 +60,6 @@ function EditMovie() {
   const handleImageChange = (e) => {
     const file = e.target.files[0];
     setImage(file);
-
     if (file) {
       const reader = new FileReader();
       reader.onloadend = () => setImagePreviewUrl(reader.result);
@@ -103,13 +102,13 @@ function EditMovie() {
         const result = await response.json();
         if (response.ok) {
           alert("Movie updated successfully!");
-          navigate("/"); // Redirect to movie list
+          navigate("/movieList");
         } else {
           alert(result.error || "Update failed.");
         }
       } catch (err) {
-        console.error("Update movie error:", err);
-        alert("Something went wrong during update.");
+        console.error("Update error:", err);
+        alert("Failed to update movie.");
       }
     }
   };

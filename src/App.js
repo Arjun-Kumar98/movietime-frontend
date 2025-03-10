@@ -1,6 +1,5 @@
-import logo from './logo.svg';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import LoginPage from './loginPage'
+import LoginPage from './LoginPage';
 import AddMovie from './AddMovie';
 import EditMovie from './EditMovie';
 import SignupPage from './SignupPage';
@@ -11,11 +10,12 @@ function App() {
   return (
     <Router>
       <Routes>
+      <Route path = "/" element = {<LoginPage/>}/>
         <Route path = "/login" element = {<LoginPage/>}/>
         <Route path = "/addMovie" element = {<AddMovie/>}/>
-        <Route path = "/editMovie" element = {<EditMovie/>}/>
         <Route path ="/signUp" element = {<SignupPage/>}/>
         <Route path="/movieList" element={<MovieList/>}/>
+        <Route path="/editMovie/:movieId" element={<EditMovie />} />
 
       </Routes>
     </Router>
