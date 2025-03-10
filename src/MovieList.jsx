@@ -34,7 +34,7 @@ function MovieList() {
     };
 
     fetchMovies();
-  }, [currentPage, userId]);
+  }, [currentPage, userId,token]);
 
   const handleLogout = () => {
     localStorage.clear();

@@ -114,7 +114,7 @@ function EditMovie() {
   };
 
   const handleCancel = () => {
-    navigate("/");
+    navigate("/movieList");
   };
 
   return (
