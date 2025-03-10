@@ -51,8 +51,6 @@ function LoginPage() {
 
         if (response.ok) {
           alert('Login successful!');
-          console.log('Token:', result.token);
-          // Optional: store token
            localStorage.setItem('token', result.token);
            localStorage.setItem('userId',result.userData);
            navigate('/movieList');

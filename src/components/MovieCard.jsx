@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "./MovieCard.css"; // Assuming you have styles here
+import "./MovieCard.css";
 
 function MovieCard({ posterUrl, title, year, id }) {
   const navigate = useNavigate();

@@ -1,6 +1,5 @@
 // src/screens/MovieList.jsx
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import MovieCard from "./components/MovieCard";
 import Pagination from "./components/Pagination";
 import "./MovieList.css";

@@ -9,7 +9,6 @@ function SignupPage() {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [errors, setErrors] = useState({});
- // const [isTyping, setIsTyping] = useState({ email: false, password: false, confirmPassword: false });
   const navigate = useNavigate();
 
   const handleEmailChange = (e) => {
@@ -46,7 +45,6 @@ function SignupPage() {
         headers:{"Content-Type":"application/json" },
         body:JSON.stringify({email,password}),
         });
-      const result = await response.json();
       if(response.status===201){
         alert("Signup successful!");
         setEmail("");

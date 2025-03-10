@@ -61,7 +61,7 @@ function AddMovie() {
           method: "POST",
           headers: {
             "Authorization":`Bearer ${token}`,
-            "X-Requested-With": "XMLHttpRequest", // 👈 Required to avoid Server Action behavior
+            "X-Requested-With": "XMLHttpRequest", 
           },
           body: formData,
         });
